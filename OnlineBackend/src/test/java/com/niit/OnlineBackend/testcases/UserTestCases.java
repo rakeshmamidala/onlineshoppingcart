@@ -1,4 +1,4 @@
-package com.niit.OnlineBackend.testcases;
+/*package com.niit.OnlineBackend.testcases;
 
 import static org.junit.Assert.assertEquals;
 
@@ -33,6 +33,7 @@ public class UserTestCases
    @Test
    public void testAddUser()
    {
+	   
 	   user=new User();
        
 	   user.setFirstName("rakesh");
@@ -52,5 +53,7 @@ public class UserTestCases
 	   user= userDAO.getByEmail("rakesh.maamidaala@gmail.com");
 	   assertEquals("something went wrong while getting user",true,userDAO.getByEmail("rakesh.maamidaala@gmail.com"));
    }
+   }
    */
-}
+   
+   

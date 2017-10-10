@@ -14,9 +14,10 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages={"com.niit.OnlineBackend"})
+@ComponentScan(basePackages={"com.niit.OnlineBackend.model"})
 @EnableTransactionManagement
-public class HibernateConfig {
+public class HibernateConfig 
+{
 
 	// Change the below based on the DBMS you choose
 	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/test2";
@@ -27,7 +28,8 @@ public class HibernateConfig {
 	
 	// dataSource bean will be available
 	@Bean("dataSource")
-	public DataSource getDataSource() {
+	public DataSource getDataSource() 
+	{
 		
 		BasicDataSource dataSource = new BasicDataSource();
 		
@@ -44,7 +46,8 @@ public class HibernateConfig {
 	// sessionFactory bean will be available
 	
 	@Bean
-	public SessionFactory getSessionFactory(DataSource dataSource) {
+	public SessionFactory getSessionFactory(DataSource dataSource) 
+	{
 		
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		
@@ -58,7 +61,8 @@ public class HibernateConfig {
 	
 	
 	// All the hibernate properties will be returned in this method	
-	private Properties getHibernateProperties() {
+	private Properties getHibernateProperties() 
+	{
 		
 		Properties properties = new Properties();
 		
@@ -74,8 +78,11 @@ public class HibernateConfig {
 	
 	// transactionManager bean
 	@Bean
-	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
+	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) 
+	{
+		
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
+		
 		return transactionManager;
 	}
 	

@@ -2,14 +2,17 @@ package com.niit.OnlineBackend.daoimpl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import com.niit.OnlineBackend.dao.CategoryDAO;
 import com.niit.OnlineBackend.model.Category;
+
 
 @Repository("categoryDAO")
 @Transactional
@@ -19,6 +22,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Category> list() {
 		

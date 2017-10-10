@@ -30,9 +30,9 @@ public class CategoryTestCases
    public void testAddCategory()
    {	   
 	   category=new Category();
-	   category.setName("xxxxx");
-	   category.setDescription("tis is some description");
-	   category.setImageURL("download6.png");
+	   category.setName("Furnitures25");
+	   category.setDescription("tis is some description about Furnitures");
+	   category.setImageURL("download9.png");
 	   assertEquals("susscefully add a category inside a table",true,categoryDAO.add(category));
 	   
    }
@@ -41,7 +41,7 @@ public class CategoryTestCases
    public void testGetCategory()
    {
 	   
-	   category=categoryDAO.get(1);
+	   category=categoryDAO.get(2);
 	   assertEquals("succesfully fetched single category from table","Television",category.getName()); 
 	   
    }
@@ -68,9 +68,9 @@ public class CategoryTestCases
    @Test
    public void testListCategory()
    {
-	   assertEquals("sucessfully fetched the list of category from the table",3,categoryDAO.list().size());
+	   assertEquals("sucessfully fetched the list of category from the table",4,categoryDAO.list().size());
    }
-   
-  */
+  */ 
+  
 }
 	
