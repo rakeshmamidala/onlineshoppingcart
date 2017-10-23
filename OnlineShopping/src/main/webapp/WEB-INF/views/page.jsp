@@ -80,7 +80,7 @@
 				<%@include file="contact.jsp"%>
 			</c:if>
 			
-			<!-- Load only when user clicks viewproducts -->
+			<!-- Load only when user clicks contact -->
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>	
@@ -91,11 +91,16 @@
 				<%@include file="singleProduct.jsp"%>
 			</c:if>								
 
-            <!-- Load only when user clicks login -->
-            <c:if test="${userClickLogin == true}">
-				<%@include file="login.jsp"%>
-			</c:if>								
-            
+			<!-- Load only when user clicks manage product -->
+			<c:if test="${userClickManageProduct == true}">
+				<%@include file="manageProduct.jsp"%>
+			</c:if>	
+
+			<!-- Load only when user clicks manage product -->
+			<c:if test="${userClickShowCart == true}">
+				<%@include file="cart.jsp"%>
+			</c:if>	
+
 		</div>
 
 

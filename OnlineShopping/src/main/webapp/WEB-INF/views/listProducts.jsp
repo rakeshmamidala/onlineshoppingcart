@@ -13,30 +13,34 @@
 		<!-- to display the actual products -->
 		<div class="col-md-9">
 
-			<!-- Added breadcrumb component -->  
+			<!-- Added breadcrumb component -->
 			<div class="row">
 
 				<div class="col-lg-12">
 
 					<c:if test="${userClickAllProducts == true}">
-					 
+					
 						<script>
 							window.categoryId = '';
 						</script>
-					 
-					  	<ol class="breadcrumb">
+					
+						<ol class="breadcrumb">
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
 							<li class="active">All Products</li>
 
 
-						</ol>   
+						</ol>
 					</c:if>
 					
-	  
+					
 					<c:if test="${userClickCategoryProducts == true}">
-				 		<ol class="breadcrumb">
+						<script>
+							window.categoryId = '${category.id}';
+						</script>
+					
+						<ol class="breadcrumb">
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
@@ -45,15 +49,9 @@
 
 
 						</ol>
-				 		
-				 		<script> 
-							window.categoryId = '${category.id}';
-						</script>  
-					
-						
 					</c:if>
 					
-  
+
 				</div>
 
 

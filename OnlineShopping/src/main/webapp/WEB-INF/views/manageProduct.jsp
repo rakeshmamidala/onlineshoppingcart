@@ -1,50 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    
-    <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
-<spring:url var="css" value="/resources/css" />
-<spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/images" />
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
-<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- Bootstrap Core CSS -->
-<link href="${css}/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
-
-
-<!-- Bootstrap DataTables -->
-<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
-
-
-<!-- Custom CSS -->
-<link href="${css}/myapp.css" rel="stylesheet">
-
-<!-- DataTable Bootstrap Script -->
-<script src="${js}/angular.js"></script>
-
-<!-- DataTable Bootstrap Script -->
-<script src="${js}/productsController.js"></script>
-
-</head>
-<body>
-
-
-
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
 <div class="container">
@@ -143,7 +96,7 @@
 							
 						</div>
 
- 
+
 					
 						<div class="form-group">
 							
@@ -151,9 +104,9 @@
 							
 								<input type="submit" name="submit" value="Save" class="btn btn-primary"/>
 								
-           				</div>
+							</div>
 						</div>						
-									
+										
 					</sf:form>
 
 				</div>
@@ -164,7 +117,7 @@
 
 	</div>
 
-	<!-- Modal --> 
+	<!-- Modal -->
 	<div class="modal fade" id="myCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -197,13 +150,13 @@
 					<div class="col-md-offset-4 col-md-4">					
 						<input type="submit" name="submit" value="Save" class="btn btn-primary"/>						
 					</div>
-				</div>          
+				</div>	        
 	        </sf:form>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	 
+	
 	<hr/>	
 	<h1>Available Products</h1>
 	<hr/>
@@ -252,13 +205,3 @@
 	</div>
 
 </div>
-
-
-
-
-
-
-
-
-</body>
-</html>

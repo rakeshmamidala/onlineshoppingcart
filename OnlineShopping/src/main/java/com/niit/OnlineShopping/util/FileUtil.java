@@ -13,9 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
-public class FileUtil 
-{
-	
+public class FileUtil {
+
 	private static final String ABS_PATH = "E:/JAVAApp/online-shopping/onlineshopping/src/main/webapp/assets/images/";
 	private static String REAL_PATH = null;
 	private static final Logger logger = LoggerFactory.getLogger(FileUtil.class);
@@ -76,5 +75,3 @@ public class FileUtil
 	}
 	
 }
-
-

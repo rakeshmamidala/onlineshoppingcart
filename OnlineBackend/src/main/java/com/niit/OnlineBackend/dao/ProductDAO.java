@@ -1,12 +1,10 @@
 package com.niit.OnlineBackend.dao;
-
 import java.util.List;
 
 import com.niit.OnlineBackend.model.Product;
 
-public interface ProductDAO 
-{
-	
+public interface ProductDAO {
+
 	Product get(int productId);
 	List<Product> list();	
 	boolean add(Product product);
@@ -21,5 +19,4 @@ public interface ProductDAO
 	List<Product> listActiveProductsByCategory(int categoryId);
 	List<Product> getLatestActiveProducts(int count);
 	
-
 }

@@ -5,8 +5,7 @@ import org.springframework.validation.Validator;
 
 import com.niit.OnlineBackend.model.Product;
 
-public class ProductValidator implements Validator
-{
+public class ProductValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> clazz) {
@@ -31,6 +30,5 @@ public class ProductValidator implements Validator
 			}
 
 	}
-
 
 }

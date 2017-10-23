@@ -19,8 +19,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-
-
+<title>Online Shopping - ${title}</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -51,9 +50,17 @@
 	<div class="wrapper">
 
 		<!-- Navigation -->
-	    <%@include file="./shared/navbar.jsp" %>
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a>
+	            </div>
+			</div>
+		</nav>		
+
 		<!-- Page Content -->
-<br><br><br><br>
+
 		<div class="content">
 			
    <div class="container">
@@ -128,8 +135,6 @@
 
 
 		<!-- Footer comes here -->
-		
-		<br><br><br><br><br>
 		<%@include file="./shared/footer.jsp"%>
 
 		<!-- jQuery -->

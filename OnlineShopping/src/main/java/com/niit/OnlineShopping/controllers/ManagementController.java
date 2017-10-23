@@ -1,5 +1,4 @@
 package com.niit.OnlineShopping.controllers;
-
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,14 +22,14 @@ import com.niit.OnlineBackend.dao.CategoryDAO;
 import com.niit.OnlineBackend.dao.ProductDAO;
 import com.niit.OnlineBackend.model.Category;
 import com.niit.OnlineBackend.model.Product;
-//import com.niit.OnlineBackend.model.Product;
 import com.niit.OnlineShopping.util.FileUtil;
 import com.niit.OnlineShopping.validator.ProductValidator;
 
+
 @Controller
 @RequestMapping("/manage")
-public class ManagementController 
-{
+public class ManagementController {
+
 	private static final Logger logger = LoggerFactory.getLogger(ManagementController.class);
 
 	@Autowired
@@ -42,7 +41,7 @@ public class ManagementController
 	@RequestMapping("/product")
 	public ModelAndView manageProduct(@RequestParam(name="success",required=false)String success) {		
 
-		ModelAndView mv = new ModelAndView("manageProduct");	
+		ModelAndView mv = new ModelAndView("page");	
 		mv.addObject("title","Product Management");		
 		mv.addObject("userClickManageProduct",true);
 		
@@ -73,7 +72,7 @@ public class ManagementController
 	@RequestMapping("/{id}/product")
 	public ModelAndView manageProductEdit(@PathVariable int id) {		
 
-		ModelAndView mv = new ModelAndView("manageProduct");	
+		ModelAndView mv = new ModelAndView("page");	
 		mv.addObject("title","Product Management");		
 		mv.addObject("userClickManageProduct",true);
 		
@@ -98,7 +97,7 @@ public class ManagementController
 			// edit check only when the file has been selected
 			if(!mProduct.getFile().getOriginalFilename().equals("")) {
 				new ProductValidator().validate(mProduct, results);
-			}		
+			}			
 		}
 		
 		if(results.hasErrors()) {
@@ -118,7 +117,7 @@ public class ManagementController
 		 //upload the file
 		 if(!mProduct.getFile().getOriginalFilename().equals("") ){
 			FileUtil.uploadFile(request, mProduct.getFile(), mProduct.getCode()); 
-		 } 
+		 }
 		
 		return "redirect:/manage/product?success=product";
 	}
@@ -155,3 +154,5 @@ public class ManagementController
 	
 	
 }
+
+	

@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="col-md-9">
-<br><br>
+
 			<div class="row carousel-holder">
 
 				<div class="col-md-12">
@@ -24,6 +24,9 @@
 							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+							
 						</ol>
 						<div class="carousel-inner">
 							
@@ -35,12 +38,21 @@
 								<img class="slide-image" src="${images}/banner2.jpg"
 									alt="">
 							</div>
+							
 							<div class="item">
-								<img class="slide-image" src="${images}/banner3.jpg"
+								<img class="slide-image" src="${images}/hp banner.jpg"
 									alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="${images}/banner4.jpg"
+								<img class="slide-image" src="${images}/applebanner2.jpg"
+									alt="">
+							</div>
+							<div class="item">
+								<img class="slide-image" src="${images}/redmi banner.jpg"
+									alt="">
+							</div>
+							<div class="item">
+								<img class="slide-image" src="${images}/sony banner1.jpg"
 									alt="">
 							</div>
 						</div>
